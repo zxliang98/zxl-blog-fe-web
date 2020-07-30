@@ -1,24 +1,33 @@
 # zxl-blog-fe-web
 
-## Project setup
+## 项目设置
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 开发编译和热重新加载
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 生产环境打包
+
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### 使用EsLint修复文件
+
 ```
 npm run lint
 ```
 
-### Customize configuration
+### 自定义配置
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# 项目描述
+
+todo
