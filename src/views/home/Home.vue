@@ -11,11 +11,15 @@
             <el-menu-item index="1-1">文章</el-menu-item>
             <el-menu-item index="1-2">其他</el-menu-item>
           </el-submenu> -->
-          <el-menu-item index="pub">
+          <el-menu-item index="publish">
             <i class="el-icon-printer"></i>
             <span slot="title">发布文章</span>
           </el-menu-item>
-          <el-menu-item index="3">
+          <el-menu-item index="article">
+            <i class="el-icon-printer"></i>
+            <span slot="title">文章管理</span>
+          </el-menu-item>
+          <el-menu-item index="center">
             <i class="el-icon-thumb"></i>
             <span slot="title">个人中心</span>
           </el-menu-item>

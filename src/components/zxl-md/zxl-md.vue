@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mavon-editor ref="md" v-model="content" style="min-height: 600px" @change="change" />
+    <mavon-editor ref="md" v-model="content" style="min-height: 600px" @input="input" />
 
   </div>
 </template>
@@ -29,8 +29,7 @@
       }
     },
     methods: {
-      change() {
-        console.log(this.content)
+      input() {
         this.$emit('update:existCont', this.content)
       },
     },
