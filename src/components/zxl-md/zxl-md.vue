@@ -2,7 +2,6 @@
   <div>
     <mavon-editor ref="md" v-model="content" style="min-height: 600px" @change="change" />
 
-    <button @click="submit">提交</button>
   </div>
 </template>
 
@@ -32,13 +31,11 @@
     methods: {
       change() {
         console.log(this.content)
+        this.$emit('update:existCont', this.content)
       },
-      submit() {
-        console.log(this.content)
-      }
     },
     created() {
-      if(this.existCont) {
+      if (this.existCont) {
         this.content = this.existCont
       }
     }
