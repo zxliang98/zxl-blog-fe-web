@@ -4,6 +4,7 @@ import Home from '../views/home/Home.vue'
 import Test from '../views/test/Test.vue'
 import Pub from './../views/publish/Publish.vue'
 import Center from './../views/center/Center.vue'
+import Article from './../views/article/Article.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,10 @@ const routes = [{
       path: '/center',
       name: 'center',
       component: Center
+    }, {
+      path: '/article',
+      name: 'article',
+      component: Article
     }]
   },
   {
