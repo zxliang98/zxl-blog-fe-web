@@ -32,6 +32,8 @@
 
 </script>
 <style lang="scss" scoped>
-  .article {}
+  .article {
+    width: 80%;
+  }
 
 </style>
