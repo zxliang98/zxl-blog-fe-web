@@ -16,9 +16,14 @@
       </el-form-item>
     </el-form>
     <div class="center-info" v-else>
+      <div class="button-box">
+
+        <el-button @click="editIt"> 编辑个人信息 </el-button>
+        <el-button @click="newUser"> 添加管理员 </el-button>
+      </div>
       <el-card>
         <div slot="header" class="clearfix">
-          <span>个人信息</span>
+          <span>我的个人信息</span> 
         </div>
         <div class="item" v-for="item in infoModel" :key="item.en">
           <el-tag effect="dark">{{item.ch}}</el-tag>
@@ -26,11 +31,6 @@
           <el-tag>{{userInfo[item.en]}}</el-tag>
         </div>
       </el-card>
-      <div class="button-box">
-
-        <el-button @click="editIt"> 编辑个人信息 </el-button>
-        <el-button @click="newUser"> 添加管理员 </el-button>
-      </div>
     </div>
   </div>
 </template>
@@ -109,7 +109,7 @@
       }
 
       .button-box {
-        margin-top: 20px;
+        margin-bottom: 20px;
       }
     }
   }

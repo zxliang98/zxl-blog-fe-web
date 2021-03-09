@@ -23,6 +23,10 @@
             <i class="el-icon-thumb"></i>
             <span slot="title">个人中心</span>
           </el-menu-item>
+          <el-menu-item index="user">
+            <i class="el-icon-thumb"></i>
+            <span slot="title">用户管理</span>
+          </el-menu-item>
 
         </el-menu>
       </el-aside>

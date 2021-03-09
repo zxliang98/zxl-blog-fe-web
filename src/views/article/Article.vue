@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import {getArticleList} from '@/http/article'
   export default {
     data() {
       return {
@@ -27,6 +28,17 @@
           label: "发布人"
         }]
       }
+    },
+    methods: {
+      async getArticleList() {
+        let params = {}
+        let res = await getArticleList(this, params)
+        console.log(res);
+        this.articleList = res.data
+      }
+    },
+    created() {
+      this.getArticleList()
     }
   }
 

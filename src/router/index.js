@@ -5,6 +5,7 @@ import Test from '../views/test/Test.vue'
 import Pub from './../views/publish/Publish.vue'
 import Center from './../views/center/Center.vue'
 import Article from './../views/article/Article.vue'
+import User from './../views/user/User.vue'
 
 Vue.use(VueRouter)
 
@@ -25,6 +26,10 @@ const routes = [{
       path: '/article',
       name: 'article',
       component: Article
+    }, {
+      path: '/user',
+      name: 'user',
+      component: User
     }]
   },
   {
