@@ -2,7 +2,11 @@
   <div class="home">
     <el-container>
       <el-aside width="200px">
-        <el-menu :router="true" default-active="pub" class="el-menu-vertical-demo">
+        <el-menu
+          @select="handleSelect"
+          default-active="pub"
+          class="el-menu-vertical-demo"
+        >
           <!-- <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
@@ -19,6 +23,10 @@
             <i class="el-icon-printer"></i>
             <span slot="title">文章管理</span>
           </el-menu-item>
+          <el-menu-item index="catalog">
+            <i class="el-icon-printer"></i>
+            <span slot="title">分类管理</span>
+          </el-menu-item>
           <el-menu-item index="center">
             <i class="el-icon-thumb"></i>
             <span slot="title">个人中心</span>
@@ -27,7 +35,6 @@
             <i class="el-icon-thumb"></i>
             <span slot="title">用户管理</span>
           </el-menu-item>
-
         </el-menu>
       </el-aside>
       <el-container>
@@ -41,21 +48,35 @@
 </template>
 
 <script>
-  export default {
-    name: 'Home',
-    components: {}
-  }
+export default {
+  name: "Home",
+  components: {},
+  data() {
+    return {
+      lastRoute: ""
+    };
+  },
+  methods: {
+    handleSelect(m) {
+      console.log(m);
+      if (m === this.lastRoute) return;
 
+      this.lastRoute = m;
+      this.$router.push({
+        name: m
+      });
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-  .el-menu {
-    min-height: 100vh;
-  }
+.el-menu {
+  min-height: 100vh;
+}
 
-  .el-header {
-    line-height: 60px;
-    border-bottom: 1px solid #e6e6e6;
-  }
-
+.el-header {
+  line-height: 60px;
+  border-bottom: 1px solid #e6e6e6;
+}
 </style>

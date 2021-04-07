@@ -1,46 +1,58 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/home/Home.vue'
-import Test from '../views/test/Test.vue'
-import Pub from './../views/publish/Publish.vue'
-import Center from './../views/center/Center.vue'
-import Article from './../views/article/Article.vue'
-import User from './../views/user/User.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+import Home from "../views/home/Home.vue";
+// 发布文章
+import Pub from "./../views/publish/Publish.vue";
+// 文章管理
+import Article from "./../views/article/Article.vue";
+// 分类管理
+import Catalog from "./../views/catalog/Catalog.vue";
+// 个人中心
+import Center from "./../views/center/Center.vue";
+// 用户管理
+import User from "./../views/user/User.vue";
 
-const routes = [{
-    path: '/',
-    name: 'Home',
-    component: Home,
-    redirect: 'publish',
-    children: [{
-      path: '/publish',
-      name: 'publish',
-      component: Pub
-    }, {
-      path: '/center',
-      name: 'center',
-      component: Center
-    }, {
-      path: '/article',
-      name: 'article',
-      component: Article
-    }, {
-      path: '/user',
-      name: 'user',
-      component: User
-    }]
-  },
+Vue.use(VueRouter);
+
+const routes = [
   {
-    path: '/test',
-    name: 'Test',
-    component: Test
+    path: "/",
+    name: "Home",
+    component: Home,
+    redirect: "publish",
+    children: [
+      {
+        path: "/publish",
+        name: "publish",
+        component: Pub
+      },
+      {
+        path: "/article",
+        name: "article",
+        component: Article
+      },
+      {
+        path: "/catalog",
+        name: "catalog",
+        component: Catalog
+      },
+      {
+        path: "/center",
+        name: "center",
+        component: Center
+      },
+      {
+        path: "/user",
+        name: "user",
+        component: User
+      }
+    ]
   }
-]
+];
 
 const router = new VueRouter({
   routes
-})
+});
 
-export default router
+export default router;

@@ -4,6 +4,9 @@
       <el-form-item label="标题:">
         <el-input v-model="title"></el-input>
       </el-form-item>
+      <el-form-item label="分类:">
+        <zxl-catalog></zxl-catalog>
+      </el-form-item>
       <el-form-item label="内容:">
         <zxl-md :existCont.sync="existCont"></zxl-md>
       </el-form-item>
@@ -16,6 +19,7 @@
 
 <script>
   import zxlMd from './../../components/zxl-md/zxl-md'
+  import zxlCatalog from './../../components/zxl-catalog/zxl-catalog'
   export default {
     data() {
       return {
@@ -24,7 +28,8 @@
       }
     },
     components: {
-      zxlMd
+      zxlMd,
+      zxlCatalog
     },
     methods: {
       pubArticle() {
