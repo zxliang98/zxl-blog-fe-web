@@ -4,7 +4,7 @@
       <el-aside width="200px">
         <el-menu
           @select="handleSelect"
-          default-active="pub"
+          :default-active="currentPath"
           class="el-menu-vertical-demo"
         >
           <!-- <el-submenu index="1">
@@ -53,15 +53,24 @@ export default {
   components: {},
   data() {
     return {
-      lastRoute: ""
+      currentPath: "publish"
     };
+  },
+  watch: {
+    "$route.name": {
+      handler(n) {
+        console.log(n);
+        this.currentPath = n;
+      },
+      deep: true,
+      immediate: true
+    }
   },
   methods: {
     handleSelect(m) {
       console.log(m);
-      if (m === this.lastRoute) return;
+      if (m === this.currentPath) return;
 
-      this.lastRoute = m;
       this.$router.push({
         name: m
       });

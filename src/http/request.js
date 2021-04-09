@@ -5,7 +5,7 @@ var instance = axios.create({
   // baseURL: 'http://112.125.89.73:3023/api',
 //   baseURL: 'http://localhost:3000/api',
   baseURL: 'http://localhost:3000',
-  timeout: 10000
+  // timeout: 10000
 })
 
 // 添加请求拦截器

@@ -28,6 +28,11 @@ const routes = [
         component: Pub
       },
       {
+        path: "/edit:id",
+        name: "edit",
+        component: Pub
+      },
+      {
         path: "/article",
         name: "article",
         component: Article
